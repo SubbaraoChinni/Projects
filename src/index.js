@@ -1,15 +1,30 @@
-import 'babel-polyfill'
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { createStore, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
+import thunk from 'redux-thunk'
+import { createLogger } from 'redux-logger'
+import reducer from './reducers'
+import App from './App';
+import './index.css';
 
-import App from './components/App';
-import Root from './Root';
+const middleWare = [ thunk ]
+if(process.env.NODE_NEW !== 'production'){
+  middleWare.push(createLogger())
+}
+ const store = createStore(
+   reducer,
+   applyMiddleware(...middleWare)
+ )
 
-import './index.scss';
+ render(
+   <Provider store = {store}>
+     <App/>
+   </Provider>,
+   document.getElementById('root')
+ )
 
-ReactDOM.render(
-  <Root>
-    <App />
-  </Root>,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <App />,
+//   document.getElementById('root')
+// );
