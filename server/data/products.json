@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "sku": 111,
+      "title": "TV",
+      "description": "40 inch",
+      "availableSizes": ["40", "50"],
+      "style": "LED",
+      "price": 11500.01,
+      "installments": 9,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isFreeShipping": true,
+      "inventory" : 5
+    },
+
+    {
+      "id": 2,
+      "sku": 222,
+      "title": "Fridge",
+      "description": "200 ltr",
+      "availableSizes": ["200"],
+      "style": "Double Door",
+      "price": 11110.99,
+      "installments": 5,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isFreeShipping": true,
+      "inventory":20
+    },
+
+    {
+      "id": 3,
+      "sku": 444,
+      "title": "Mobile",
+      "description": "Smart phone",
+      "availableSizes": ["4", "5", "5.5"],
+      "style": "Front tie dye print",
+      "price": 1119.99,
+      "installments": 3,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isFreeShipping": true,
+      "inventory":5
+    }
+  ]
+}
